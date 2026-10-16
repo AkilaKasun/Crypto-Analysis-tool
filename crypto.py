@@ -3,6 +3,7 @@ import os
 from json import JSONDecodeError
 from typing import List
 
+from cores import setup_cors
 from dotenv import load_dotenv
 from fastapi import FastAPI
 import requests
@@ -12,13 +13,15 @@ from model import CryptoAnalysisRequest, CryptoAnalysisResponse
 
 load_dotenv()
 
-app = FastAPI()
+
+
 
 OPENROUTER_KEY=os.getenv("OPENROUTER_KEY")
 OPENROUTER_URL=os.getenv("OPENROUTER_URL")
 COINGECKO_URL=os.getenv("COINGECKO_URL")
 
 app = FastAPI( title="Crypto Analysis AI TOOL")
+setup_cors(app)
 
 def get_crypto_insights(coin_list:List[str]):
 
