@@ -61,7 +61,7 @@ cd Crypto-Analysis-tool
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+.venv\scripts\activate 
 ```
 
 ### 3. Install dependencies
