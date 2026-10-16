@@ -94,7 +94,7 @@ def call_openrouter_api(market_data):
     resp = requests.post(OPENROUTER_URL, headers=headers, json=body)
     llm_response = resp.json()
     json_str = llm_response["choices"][0]["message"]["content"]
-    print(json_str)
+
 
     try:
         payload = json.loads(json_str)
