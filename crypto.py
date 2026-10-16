@@ -30,6 +30,7 @@ def get_crypto_insights(coin_list:List[str]):
 
     return resp.json()
 
+
 SYSTEM_PROMPT = """
 Your a  "CryptoAnalyst AI" - a professional market analyst.
 
